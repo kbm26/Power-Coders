@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='data.css') }}">
+	<title>Chartjs Charts</title>
+</head>
+
+<body>
+
+    <div class="chart"  style="height: 50vh; width: 50%;">
+        <h1> Track Waste Recycled</h1>
+		<canvas id="myCat"></canvas>
+	</div>
+	
+    <script>
+		const labels = {{ labels | tojson}};
+
+
+        const data = [8, 10, 15, 17, 15, 10, 12,10,17,20,16,18];
+
+        const yValues1 = [1, 3, 5, 10, 5, 1, 3, 4, 7, 10, 15,6,0];
+        const yValues2 = [3, 3, 5, 5, 1, 8, 3, 3, 1, 5, 16,5,8];
+        const yValues3 = [4, 4, 5, 2, 9, 1, 6, 3, 9, 15, 5,5,10];
+        
+        const options = {
+  type: 'line',
+  data: {
+    datasets: [{
+        label: 'Steel',
+        data: yValues1,
+        borderColor: 'black'
+      },
+      {
+        label: 'Plastic',
+        data: yValues2,
+        borderColor: 'orange',
+      },
+      {
+        label: 'e scraps',
+        data: yValues3,
+        borderColor: 'red',
+      },
+      {
+      label: 'Total',
+        data: data,
+        borderColor: 'green'
+      }
+    ]
+  },
+  options: {
+    scales: {
+      xAxes: [{
+          type: 'category',
+          labels: labels,
+          id: 'x',
+        },
+        {
+          type: 'category',
+          id: 'x2',
+        }
+      ]
+    }
+  }
+}
+
+const ctx = document.getElementById('myCat').getContext('2d');
+new Chart(ctx, options);
+	</script>
+</body>
+</html>
