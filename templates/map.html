@@ -6,13 +6,93 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXIwgN8zArL5E1cUqmRRmNBhxKn7GjXgw&callback=initMap" async defer></script>
   <style>
     /* Style the map container */
+    body{
+        margin: 0%;
+    }
     #map {
       height: 1000px;
       width: 100%;
     }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+#navy{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+li, a, button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+    padding: 0 20px;
+}
+
+.nav__links li a:hover{
+    color: #0088a9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 1);
+}
   </style>
 </head>
 <body>
+    <header id="navy">
+        <img class="logo" src="https://via.placeholder.com/80x20" alt="logo ">
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="/home">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="/map">Map</a>
+                    <a href="/data">Data</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="cta">
+            <button>CONTACT</button>
+        </a>
+    </header>
   <!-- Create a container for the map with an id "map" -->
   <div id="map"></div>
 

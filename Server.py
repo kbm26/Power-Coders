@@ -26,9 +26,42 @@ def index():
 def direct_map():
     return render_template("map.html")
 
+@app.route('/home', methods=['GET'])
+def direct_home():
+    return render_template("home.html")
+
+# @app.route('/data', methods=['GET'])
+# def direct_data():
+#     return render_template("data.html")
+
 @app.route('/data', methods=['GET'])
-def direct_data():
-    return render_template("data.html")
+def data_view():
+    #total sales
+    labels = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    ]
+ 
+    data = [8, 10, 15, 17, 15, 10, 12,10,17,20,16,18]
+
+   
+ 
+    # Return the components to the HTML template 
+    return render_template(
+        template_name_or_list='data.html',
+        data=data,
+        labels=labels
+    )
 
  
 if __name__ == '__main__':
