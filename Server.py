@@ -22,6 +22,14 @@ def index():
         conn.commit()
     return render_template('home.html')
 
+@app.route('/map', methods=['GET'])
+def direct_map():
+    return render_template("map.html")
+
+@app.route('/data', methods=['GET'])
+def direct_data():
+    return render_template("data.html")
+
  
 if __name__ == '__main__':
     app.run(debug=True)
