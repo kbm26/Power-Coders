@@ -10,7 +10,7 @@
 </head>
 <body>
     <header id="navy">
-        <img class="logo" src="https://via.placeholder.com/80x20" alt="logo ">
+        <img class="logo" src="{{ url_for('static', filename= '/media/vortex-vanguard-high-resolution-logo-transparent.png') }}" alt="logo ">
         <nav>
             <ul class="nav__links">
                 <li>
@@ -26,5 +26,27 @@
             <button>CONTACT</button>
         </a>
     </header>
+    <div class="hero">
+        <div class="content">
+          <h1>Welcome to</h1>
+          <h1>EcoMoney</h1>
+          <a href="/map"><button type="button">Go To Map</button></a>
+          <a href="/data"><button type="button">Check Data</button></a>
+        </div>
+        <!-- <div class="side-bar">
+          <img src="https://i.ibb.co/3dGfMFK/menu.png" alt"menu icon" class="menu">
+          <div class="social-links">
+            <img src="https://i.ibb.co/9NKTKHF/fb.png" alt="">
+            <img src="https://i.ibb.co/422KsjC/ig.png" alt="">
+            <img src="https://i.ibb.co/9ZqmptB/tw.png" alt="">      
+          </div>
+          
+          <div class="useful-links">
+            <img src="https://i.ibb.co/3cXFLKg/share.png" alt="">
+            <img src="https://i.ibb.co/7zfYDwm/info.png" alt="">      
+          </div>
+        </div> -->
+        
+      </div>
 </body>
 </html>

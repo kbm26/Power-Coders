@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-body{
-    margin: 0%;
-}
-
 #navy{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: #24252A;
+}
+
+body{
+  margin: 0%;
 }
 
 li, a, button{
@@ -20,6 +20,7 @@ li, a, button{
 }
 
 header{
+  position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -62,3 +63,96 @@ button{
 button:hover{
     background-color: rgba(0, 136, 169, 1);
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: url(media/light-trails-buildings.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.logo,
+button {
+  cursor: pointer;  
+}
+
+#logo{
+  width: 30%;
+}
+
+navbar {
+  width: 85%;
+  height: 15%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 100px;
+}
+button {
+  color: black;
+  padding: 10px 25px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  outline: pointer;
+}
+.content {
+  color: #fbfcfd;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+h1 {
+  font-size: 80px;
+  margin: 10px 0 30px;
+  line-height: 80px;
+}
+.side-bar {
+  width: 50px;
+  height: 100vh;
+  background: linear-gradient(#00545d, #000729);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.menu {
+  display: block;
+  width: 25px;
+  margin: 40px auto 0;
+  cursor: pointer;
+}
+.social-links img,
+.useful-links img {
+  width: 25px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+.social-links{
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.useful-links{
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  transform: translateY(-50%);
+}
+
