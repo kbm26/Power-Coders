@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" type="text/css" href="home.css">
+
     <title>Document</title>
 </head>
 <body>
-    <div>HOmepage</div>
-    
+    <header>
+        <img class="logo" src="https://via.placeholder.com/80x20" alt="logo ">
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Map</a>
+                    <a href="#">Data</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="cta">
+            <button>CONTACT</button>
+        </a>
+    </header>
 </body>
 </html>
