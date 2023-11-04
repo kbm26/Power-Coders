@@ -1,0 +1,124 @@
+.chart{
+    text-align: center;
+
+}
+
+body{
+    margin: 0%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+#navy{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+li, a, button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+    padding: 0 20px;
+}
+
+.nav__links li a:hover{
+    color: #0088a9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 1);
+}
+
+
+.container {
+    margin-top: 5%;
+  }
+  
+  .progress-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    animation: expand 2.5s ease forwards;
+  }
+  
+  .progress-completed {
+    width: 15px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 1%;
+    background: linear-gradient(
+      100deg,
+      #26d0ce 20%,
+      #00c6ff 30%,
+      #0072ff 40%,
+      #2948ff 80%
+    );
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 0 0 0.5px rgba(49, 49, 93, 0.03),
+      0 2px 5px 0 rgba(49, 49, 93, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  }
+  
+  .progress-remaining {
+    width: 15px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 1%;
+    background: rgba(211, 211, 211, 0.6);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 0 0 0.5px rgba(49, 49, 93, 0.03),
+      0 2px 5px 0 rgba(49, 49, 93, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  }
+  
+  @keyframes expand {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  

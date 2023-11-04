@@ -117,18 +117,30 @@ button:hover{
             position: userLocation,
             map: map,
             title: 'Your Location',
-            icon: "/DBT/kisspng-house-symbol-home-icon-green-marker-cliparts-5a889b0e151677.7986148515189020300864_resized.png"
           });
 
-          const recycler_location = {
-              lat: position.coords.latitude + 0.001,
+          const pipe_leakage_location = {
+              lat: position.coords.latitude + 0.0011,
             lng: position.coords.longitude + 0.001
           };
-          const recycler_marker = new google.maps.Marker({
-            position: recycler_location,
+          const leakage_marker = new google.maps.Marker({
+            position: pipe_leakage_location,
             map: map,
-            title: 'Recyclers location',
-            icon: "/DBT/5a355a429cffd3.4578392115134459546431_resized.png"
+            title: 'leakage location',
+            icon: "Power-Coders/leakage.png"
+
+          });
+
+
+          const faulty_cables_location = {
+              lat: position.coords.latitude + 0.001,
+            lng: position.coords.longitude - 0.0014
+          };
+          const cable_marker = new google.maps.Marker({
+            position: faulty_cables_location,
+            map: map,
+            title: 'faulty cable location',
+            icon: "cable_fault.png"
           });
 
 
