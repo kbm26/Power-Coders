@@ -40,6 +40,7 @@ header{
 .logo{
     cursor: pointer;
     margin-right: auto;
+    width: 3.9%;
 }
 
 .nav__links{
@@ -77,7 +78,7 @@ button:hover{
 </head>
 <body>
     <header id="navy">
-        <img class="logo" src="https://via.placeholder.com/80x20" alt="logo ">
+        <img class="logo" src="{{ url_for('static', filename= '/media/logo.png') }}" alt="logo ">
         <nav>
             <ul class="nav__links">
                 <li>

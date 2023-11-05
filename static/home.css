@@ -98,8 +98,22 @@ navbar {
   justify-content: space-between;
 }
 .logo {
-  width: 100px;
+  width: 75px;
 }
+
+#main_logo{
+    position: absolute;
+    bottom: 20vh;
+    left: 20vw;
+}
+
+.logoHero{
+    position: relative;
+    bottom: 35vh;
+    left: 60vw;
+    width: 80%;
+}
+
 button {
   color: black;
   padding: 10px 25px;

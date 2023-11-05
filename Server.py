@@ -20,11 +20,27 @@ def index():
         cursor = conn.cursor()
         # cursor.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, firstname TEXT NOT NULL, lastname TEXT NOT NULL, email TEXT NOT NULL, contact_no TEXT NOT NULL, account_type TEXT NOT NULL)')
         conn.commit()
-    return render_template('home.html')
+    return render_template('login.html')
 
 @app.route('/map', methods=['GET'])
 def direct_map():
     return render_template("map.html")
+
+@app.route('/process_login', methods=['POST'])
+def process_login():        
+    return render_template("home.html")
+
+@app.route('/process_form', methods=['POST'])
+def process_form():
+    return render_template("login.html")
+
+@app.route('/login', methods=['GET'])
+def direct_login():
+    return render_template("login.html")
+
+@app.route('/signup', methods=['GET'])
+def direct_signup():
+    return render_template("signup.html")
 
 @app.route('/home', methods=['GET'])
 def direct_home():

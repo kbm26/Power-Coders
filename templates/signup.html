@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='signup.css') }}">
+    <link rel="stylesheet" type="text/css" href="signup.css">    
+    <title>Signup Page</title>
+</head>
+
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="/process_form" method="POST">
+                    <h2>Sign Up</h2>
+                    <div id="form_1">
+                        
+                        <div id="rightInput" class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="text" id="firstname" name="firstname" required>
+                            <label for="">First Name</label>
+                        </div>
+                        <div id="lastN"  class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="text" id="lastname" name="lastname" required>
+                            <label for="">Last Name</label>
+                        </div>
+                        <div id="em" class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="email" id="email" name="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div id="cont_num" class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="tel" id="number" name="number" pattern="[0-9]{10}" required>
+                            <label for="">Contact Number</label>
+                        </div>
+                        <div id="pass" class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" required>
+                            <label for="">Password</label>
+                        </div>
+                        <div id="confirm_pass" class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" id="Confirm_password" name="Confirm_password" minlength="6" maxlength="16" required>
+                            <label for="">Confirm Password</label>
+                        </div>
+                        <button type="button" onclick="toggle()">Next Page</button>
+                        <!-- <div class="register">
+                            <p>Already have an account <a href="/signup2">Login</a></p>
+                        </div> -->
+                </div>
+                <div id="form_2">
+                    <div id="rightInput" class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="text" id="street" name="street" required>
+                        <label for="">Street Name</label>
+                    </div>
+                    <div id="lastN"  class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="text" id="city" name="city" required>
+                        <label for="">City</label>
+                    </div>
+                    <div id="em" class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="text" id="province" name="province" required>
+                        <label for="">Province</label>
+                    </div>
+                    <div id="cont_num" class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="text" id="postal_code" name="postal_code" required>
+                        <label for="">Postal Code</label>
+                    </div>
+                    <!-- <div id="select_box">
+                        <select id="account_type" name="account_type">
+                            <option value="recycler">Recycler</option>
+                            <option value="collector">Collector</option>
+                        </select>
+                    </div> -->
+                    <button>register</button>
+                    <div class="register">
+                        <p>Already have an account <a href="/login">Login</a></p>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggle() {
+            // e.preventDefault();
+            console.log("SASASAS")
+            var x = document.getElementById("form_1");
+            var y = document.getElementById("form_2");
+
+            console.log(x.style.display)
+            console.log(y.style.display)
+            if (x.style.display == "none") {
+                console.log(1)
+                x.style.display = "block";
+            } else {
+                console.log(2)
+                x.style.display = "none";
+            }
+            if (y.style.display != "none") {
+                console.log(3)
+                y.style.display = "block";
+            } else {
+                console.log(4)
+                y.style.display = "none";
+            }
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <body>
+    <form action="/process_form" method="POST">
+        <h1>Signup Page</h1>
+
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <br>
+        <br>
+
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <br>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+        <br>
+
+        <label for="number">Contact number:</label>
+        <input type="tel" id="number" name="number" pattern="[0-9]{10}" required>
+
+        <br>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" maxlength="16" required>
+
+        <br>
+        <br>
+
+        <label for="Confirm_password">Confirm password:</label>
+        <input type="password" id="Confirm_password" name="Confirm_password" minlength="6" maxlength="16" required>
+
+        <br>
+        <br>
+
+        <label for="account_type">Account type:</label>
+        <select id="account_type" name="account_type">
+            <option value="recycler">Recycler</option>
+            <option value="collector">Collector</option>
+        </select>
+
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body> -->
