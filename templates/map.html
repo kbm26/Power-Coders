@@ -128,7 +128,7 @@ button:hover{
             position: pipe_leakage_location,
             map: map,
             title: 'leakage location',
-            icon: "Power-Coders/leakage.png"
+            icon: "static/media/hiclipart.com (1).png"
 
           });
 
@@ -141,7 +141,19 @@ button:hover{
             position: faulty_cables_location,
             map: map,
             title: 'faulty cable location',
-            icon: "cable_fault.png"
+            icon: "static/media/hiclipart.com.png"
+          });
+
+
+          const pothole_location = {
+              lat: position.coords.latitude - 0.0005,
+            lng: position.coords.longitude - 0.003
+          };
+          const pothole_marker = new google.maps.Marker({
+            position: pothole_location,
+            map: map,
+            title: 'pothole location',
+            icon: "static/media/pothole.png"
           });
 
 
